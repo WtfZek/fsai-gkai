@@ -1,6 +1,9 @@
 <template>
   <div class="theme-box" @click="toggleTheme">
-    <span class="iconfont icon-yueliang">{{ themePage === "light" ? "&#xe679;" : "&#xe60b;" }}</span>
+    <!-- 直接根据主题状态显示不同的图标 -->
+    <span class="iconfont" :class="themePage === 'light' ? 'icon-yueliang' : 'icon-taiyang'">
+      {{ themePage === "light" ? "&#xe679;" : "&#xe60b;" }}
+    </span>
   </div>
 </template>
 
@@ -20,16 +23,16 @@ const toggleTheme = () => {
 </script>
 
 <style lang="stylus" scoped>
-@import '@/assets/iconfont/iconfont.css'
+@import '@/assets/iconfont/iconfont.css';
 .theme-box{
-  z-index :111
+  z-index :111;
   position: fixed;
   right: 40px;
   bottom: 150px;
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 50%;
-  width 35px;
+  width: 35px;
   height: 35px;
   line-height: 35px;
   text-align: center;
