@@ -167,7 +167,7 @@ const connect = async () => {
     client.value.sendUserMessageContent([
       {
         type: "input_text",
-        text: "你好，我是极客学长!"
+        text: "你好，我是飞鼠 AI!"
       }
     ]);
     if (client.value.getTurnDetectionType() === "server_vad") {

@@ -142,7 +142,7 @@ import { useSharedStore } from "@/store/sharedata";
 
 const form = ref({
   username: "GeekMaster",
-  nickname: "极客学长@001",
+  nickname: "飞速学长@001",
   mobile: "1300000000",
   avatar: "",
   power: 0,

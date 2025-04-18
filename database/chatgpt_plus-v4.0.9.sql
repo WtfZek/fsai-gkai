@@ -695,7 +695,7 @@ CREATE TABLE `chatgpt_users` (
 
 LOCK TABLES `chatgpt_users` WRITE;
 /*!40000 ALTER TABLE `chatgpt_users` DISABLE KEYS */;
-INSERT INTO `chatgpt_users` VALUES (4,'18575670125','极客学长@830270','ccc3fb7ab61b8b5d096a4a166ae21d121fc38c71bbd1be6173d9ab973214a63b','/images/avatar/user.png','ueedue5l',4887,0,1,'{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}','[\"red_book\",\"gpt\",\"seller\",\"artist\",\"lu_xun\",\"girl_friend\",\"psychiatrist\",\"teacher\",\"programmer\",\"test\",\"qing_gan_da_shi\"]','[1,11]',1725519704,1,'10.0.2.2','2023-06-12 16:47:17','2024-09-05 15:02:30');
+INSERT INTO `chatgpt_users` VALUES (4,'18575670125','飞速学长@830270','ccc3fb7ab61b8b5d096a4a166ae21d121fc38c71bbd1be6173d9ab973214a63b','/images/avatar/user.png','ueedue5l',4887,0,1,'{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}','[\"red_book\",\"gpt\",\"seller\",\"artist\",\"lu_xun\",\"girl_friend\",\"psychiatrist\",\"teacher\",\"programmer\",\"test\",\"qing_gan_da_shi\"]','[1,11]',1725519704,1,'10.0.2.2','2023-06-12 16:47:17','2024-09-05 15:02:30');
 /*!40000 ALTER TABLE `chatgpt_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -248,7 +248,7 @@ import ChatSetting from "@/components/ChatSetting.vue";
 import BackTop from "@/components/BackTop.vue";
 import { closeLoading, showLoading, showMessageError } from "@/utils/dialog";
 
-const title = ref("GeekAI-智能助手");
+const title = ref("飞鼠AI-智能助手");
 const models = ref([]);
 const modelID = ref(0);
 const chatData = ref([]);

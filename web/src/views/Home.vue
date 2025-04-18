@@ -153,6 +153,7 @@ import { useSharedStore } from "@/store/sharedata";
 import ConfigDialog from "@/components/UserInfoDialog.vue";
 import { showMessageError } from "@/utils/dialog";
 import LoginDialog from "@/components/LoginDialog.vue";
+// eslint-disable-next-line no-unused-vars
 import { substr } from "@/utils/libs";
 
 const isCollapse = ref(true);
@@ -163,6 +164,7 @@ const moreNavs = ref([]);
 const curPath = ref();
 
 const title = ref("");
+// eslint-disable-next-line no-unused-vars
 const avatarImg = ref("/images/avatar/default.jpg");
 const store = useSharedStore();
 const loginUser = ref({});
@@ -206,7 +208,8 @@ watch(
 
 // 监听路由变化;
 router.beforeEach((to, from, next) => {
-  curPath.value = to.path;
+  const firstSegment = getFirstPathSegment(to.path);
+  curPath.value = `/${firstSegment}`;
   next();
 });
 
@@ -215,16 +218,20 @@ if (curPath.value === "/external") {
 }
 const changeNav = (item) => {
   curPath.value = item.url;
-  if (item.url.indexOf("http") !== -1) {
+  if (item.url.indexOf("http")!== -1) {
     // 外部链接
     router.push({ path: "/external", query: { url: item.url, title: item.name } });
   } else {
-    // 路由切换，确保路径变化
-    if (router.currentRoute.value.path !== item.url) {
-      router.push(item.url).then(() => {
-        // 刷新 `routerViewKey` 触发视图重新渲染
-        routerViewKey.value += 1;
-      });
+    const itemPath = getFirstPathSegment(item.url);
+    const currentPath = getFirstPathSegment(curPath.value);
+    if (itemPath === currentPath) {
+      // 路由切换，确保路径变化
+      if (router.currentRoute.value.path!== item.url) {
+        router.push(item.url).then(() => {
+          // 刷新 `routerViewKey` 触发视图重新渲染
+          routerViewKey.value += 1;
+        });
+      }
     }
   }
 };

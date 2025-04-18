@@ -38,7 +38,7 @@ getSystemInfo()
     copyRight.value =
       res.data.copyright.length > 1
         ? res.data.copyright
-        : "极客学长 © 2023 - " +
+        : "飞鼠科技 © 2023 - " +
           new Date().getFullYear() +
           " All rights reserved.";
   })

@@ -174,7 +174,7 @@ func (h *UserHandler) Save(c *gin.Context) {
 		if h.licenseService.GetLicense().Configs.DeCopy {
 			u.Nickname = fmt.Sprintf("用户@%d", utils.RandomNumber(6))
 		} else {
-			u.Nickname = fmt.Sprintf("极客学长@%d", utils.RandomNumber(6))
+			u.Nickname = fmt.Sprintf("飞速学长@%d", utils.RandomNumber(6))
 		}
 		res = h.DB.Create(&u)
 		_ = utils.CopyObject(u, &userVo)

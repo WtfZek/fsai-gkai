@@ -133,13 +133,13 @@
   content: "\e822";
 }
 
-.icon-taiyang:before {
-  content: "\e60b";
-}
+/*.icon-taiyang:before {*/
+/*  content: "\e60b";*/
+/*}*/
 
-.icon-yueliang:before {
-  content: "\e679";
-}
+/*.icon-yueliang:before {*/
+/*  content: "\e679";*/
+/*}*/
 
 .icon-prev-page:before {
   content: "\e8ef";
